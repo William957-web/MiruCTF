@@ -24,11 +24,11 @@ A MiruCTF instance can be setup and replicated easily using Dockerfil.
 
 Build the docker image:
 ```
-docker build . -t MiruCTF
+docker build . -t miructf
 ```
 Run the environment:
 ```
-docker run -p 80:80 -d MiruCTF
+docker run -p 80:80 -d miructf
 ```
 
 
