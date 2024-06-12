@@ -28,6 +28,6 @@ RUN mkdir /var/www/html/file && \
     chmod 777 /var/www/html/file
 
 # Creating the flag, the value is "cyber notrum" in MD5 Hash
-RUN echo "49dad4071eb37cd0ccdf7309e17a4f77" > /root/flag.txt  
+RUN echo "ICED{FirS7-1-day?!}" > /root/flag.txt  
 
 EXPOSE 80-65535
