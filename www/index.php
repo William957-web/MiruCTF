@@ -34,8 +34,8 @@
     </nav>
 
     <div class="container info-text">
-      <h1 class="text-center">MiruCTF</h1>
-      <p class="text-center">MiruCTF delete all the metadata of a file simple, uses the exiftool (version 12.23) developed by Phil Harvey on the back-end.</p>
+      <h1 class="text-center">ICY Image</h1>
+      <p class="text-center">I'll delete all the metadata of a file simple, uses the exiftool (version 12.23) developed by Phil Harvey on the back-end.</p>
     </div>
 
     <div class="upload-container text-center" >
