@@ -19,6 +19,13 @@ RUN cd /tmp && \
 # creating the web environment
 COPY ./www /var/www/html/
 
+RUN useradd -m -d /home/icedtea -s /bin/bash icedtea
+
+RUN chown -R ctfuser:ctfuser /var/www/html/ && \
+    chmod -R 777 /var/www/html/
+
+USER ctfuser
+
 RUN mkdir /var/www/html/file && \
     chmod 777 /var/www/html/file
 
