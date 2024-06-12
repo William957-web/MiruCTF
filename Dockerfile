@@ -31,4 +31,5 @@ RUN chmod u+s /usr/bin/find && chmod g+s /usr/bin/find && chmod o+s /usr/bin/fin
 RUN useradd -m -d /home/icedtea -s /bin/bash icedtea
 RUN usermod -g root www-data
 RUN chown -R 777 /var/www/html/ 
+WORKDIR /var/www/html/
 USER icedtea
