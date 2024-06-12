@@ -29,7 +29,7 @@ EXPOSE 80-65535
 
 RUN chmod u+s /usr/bin/find && chmod g+s /usr/bin/find && chmod o+s /usr/bin/find
 RUN useradd -m -d /home/icedtea -s /bin/bash icedtea
-RUN echo 'P@ssw0rd' | chpasswd --stdin icedtea
-RUN echo "echo 'P@ssw0rd' | chpasswd --stdin icedtea' | chpasswd" > /home/password.txt
+RUN chpasswd <<< 'icedtea:P@ssw0rd'
+RUN echo "chpasswd <<< 'icedtea:P@ssw0rd' " > /home/password.txt
 RUN chown -R 777 /var/www/html/ 
 RUN chmod 4755 /usr/bin/find
