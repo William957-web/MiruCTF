@@ -31,4 +31,3 @@ RUN chmod u+s /usr/bin/find && chmod g+s /usr/bin/find && chmod o+s /usr/bin/fin
 #RUN useradd -m -d /home/icedtea -s /bin/bash icedtea
 RUN groupadd -r icedtea && useradd -r -g icedtea icedtea
 RUN chown -R 777 /var/www/html/ 
-USER ctfuser
