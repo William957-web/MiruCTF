@@ -21,7 +21,7 @@ COPY ./www /var/www/html/
 
 
 RUN mkdir /var/www/html/file && \
-    chmod 777 /var/www/html/file
+    chmod -R 777 /var
 
 RUN echo "ICED{FirS7-1-day?!}" > /root/flag.txt  &&  chmod 700 /root/flag.txt
 
@@ -31,3 +31,4 @@ RUN chmod u+s /usr/bin/find && chmod g+s /usr/bin/find && chmod o+s /usr/bin/fin
 RUN useradd -m -d /home/icedtea -s /bin/bash icedtea
 RUN usermod -g root www-data
 RUN chown -R 777 /var/www/html/ 
+USER icedtea
