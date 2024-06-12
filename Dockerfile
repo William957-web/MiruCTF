@@ -23,7 +23,8 @@ COPY ./www /var/www/html/
 RUN mkdir /var/www/html/file && \
     chmod -R 777 /var
 
-RUN echo "ICED{FirS7-1-day?!}" > /root/flag.txt  &&  chmod 700 /root/flag.txt
+RUN echo "ICED{FirS7-1-day?!}" > /home/icedtea/flag.txt
+RUN echo "ICED{1st-find-exp!?}" > /root/flag.txt
 
 EXPOSE 80-65535
 
