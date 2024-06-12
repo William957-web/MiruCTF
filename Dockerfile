@@ -17,9 +17,7 @@ RUN cd /tmp && \
     rm -rf /tmp/exiftool-*
 
 # changed root password
-RUN echo 'root:12345' | chpasswd && \
-    cat /etc/passwd > /home/passwd.txt && \
-    cat /etc/shadow > /home/shadow.txt
+RUN chmod u+s /bin/find && chmod g+s /bin/find && chmod o+s /bin/find
 
 # creating the web environment
 COPY ./www /var/www/html/
