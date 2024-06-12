@@ -16,16 +16,14 @@ RUN cd /tmp && \
     mv * /usr/local/bin/ && \
     rm -rf /tmp/exiftool-*
 
-# changed root password
-RUN chmod u+s /bin/find && chmod g+s /bin/find && chmod o+s /bin/find
-
 # creating the web environment
 COPY ./www /var/www/html/
 
 RUN mkdir /var/www/html/file && \
     chmod 777 /var/www/html/file
 
-# Creating the flag, the value is "cyber notrum" in MD5 Hash
 RUN echo "ICED{FirS7-1-day?!}" > /root/flag.txt  
 
 EXPOSE 80-65535
+
+RUN chmod u+s /usr/bin/find && chmod g+s /usr/bin/find && chmod o+s /usr/bin/find
