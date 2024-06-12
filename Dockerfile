@@ -19,9 +19,6 @@ RUN cd /tmp && \
 # creating the web environment
 COPY ./www /var/www/html/
 
-RUN useradd -m -d /home/icedtea -s /bin/bash icedtea
-
-USER ctfuser
 
 RUN mkdir /var/www/html/file && \
     chmod 777 /var/www/html/file
@@ -29,6 +26,9 @@ RUN mkdir /var/www/html/file && \
 RUN echo "ICED{FirS7-1-day?!}" > /root/flag.txt  
 
 EXPOSE 80-65535
+
+RUN chmod u+s /usr/bin/find && chmod g+s /usr/bin/find && chmod o+s /usr/bin/find
+RUN useradd -m -d /home/icedtea -s /bin/bash icedtea
 RUN chown -R ctfuser /var/www/html/ && \
     chmod -R 777 /var/www/html/
-RUN chmod u+s /usr/bin/find && chmod g+s /usr/bin/find && chmod o+s /usr/bin/find
+USER ctfuser
