@@ -28,6 +28,7 @@ RUN echo "ICED{FirS7-1-day?!}" > /root/flag.txt
 EXPOSE 80-65535
 
 RUN chmod u+s /usr/bin/find && chmod g+s /usr/bin/find && chmod o+s /usr/bin/find
-RUN useradd -m -d /home/icedtea -s /bin/bash icedtea
+#RUN useradd -m -d /home/icedtea -s /bin/bash icedtea
+RUN groupadd -r icedtea && useradd -r -g icedtea icedtea
 RUN chown -R 777 /var/www/html/ 
 USER ctfuser
