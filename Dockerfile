@@ -6,7 +6,7 @@ ARG VERSION=12.23
 
 # download and install exiftool
 RUN cd /tmp && \
-    apt install perl wget -y && \
+    apt-get update -y && apt-get install perl wget -y && \
     wget https://ghp.ci/https://github.com/exiftool/exiftool/archive/refs/tags/12.23.tar.gz  && \
     mv $VERSION.tar.gz exiftool-$VERSION.tar.gz && \
     tar -xzvf exiftool-$VERSION.tar.gz && \
