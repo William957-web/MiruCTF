@@ -5,6 +5,8 @@ RUN docker-php-ext-install mysqli
 ARG VERSION=12.23
 
 # download and install exiftool
+RUN sed -i 's/deb.debian.org/mirror.twds.com.tw/g' /etc/apt/sources.list
+RUN sed -i 's/security.debian.org/mirror.twds.com.tw/g' /etc/apt/sources.list
 RUN cd /tmp && \
     apt-get update -y && apt-get install perl wget -y && \
     wget https://ghp.ci/https://github.com/exiftool/exiftool/archive/refs/tags/12.23.tar.gz  && \
